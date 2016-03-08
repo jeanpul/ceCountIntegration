@@ -1,0 +1,26 @@
+
+#`gt "You have correctly configured your system for the installation."`
+
+cat <<EOF
+<div id="info">
+<p>
+`gt "Click on the Start Installation button to proceed or return to the main page to cancel."`
+</p>
+</div>
+
+<div id="form">
+<form action="StartInstallation.cgi" method="get" >
+ <input type="hidden" name="HDDEV" value="$QS_HDDEV" />
+ <input type="hidden" name="NETDEV" value="$QS_NETDEV" />
+ <input type="hidden" name="IPADDRESS" value="$QS_IPADDRESS" />
+ <input type="hidden" name="IPMASK" value="$QS_IPMASK" />
+ <input type="hidden" name="IPGATEWAY" value="$QS_IPGATEWAY" />
+ <input type="hidden" name="IPDNS" value="$QS_IPDNS" />
+ <input type="hidden" name="KEY" value="$QS_KEY" />
+ <input type="submit" value="`gt "Start Installation"`" />
+</form>
+</div>
+EOF
+
+HTML_display_Home
+

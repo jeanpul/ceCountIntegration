@@ -1,0 +1,27 @@
+cat <<EOF
+<table>
+<tr>
+<td>`gt "IP address"`</td>
+<td><input maxlength="16" size="16" name="IPADDRESS" value="$NETWORK_IPADDRESS" /></td>
+</tr>
+<tr>
+<td>`gt "Mask"`</td>
+<td><input maxlength="16" size="16" name="IPMASK" value="$NETWORK_IPMASK" /></td>
+</tr>
+<tr>
+<td>`gt "Gateway"`</td>
+<td><input maxlength="16" size="16" name="IPGATEWAY" value="$NETWORK_IPGATEWAY" /></td>
+</tr>
+<tr>
+<td>DNS</td>
+<td><input maxlength="16" size="16" name="IPDNS" value="$NETWORK_IPDNS" /></td>
+</tr>
+</table>
+EOF
+
+if [ -n "$NETWORK_HWADDR" ]; then
+    cat <<EOF
+<input type="hidden" name="HWADDR" value="$NETWORK_HWADDR"/>
+EOF
+fi
+

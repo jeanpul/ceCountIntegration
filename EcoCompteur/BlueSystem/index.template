@@ -1,0 +1,36 @@
+cat <<EOF
+    <table summary="main menu" class="classic">
+     <tr>
+      <td><div class="linkList"><ul>
+       <li>$HTML_E11</li>
+       <li>$HTML_E12</li>
+       <li>$HTML_E13</li>
+       <li>$HTML</li>
+      </ul></div></td>
+      <td><div class="linkList"><ul>
+       <li><a id="reboot" href="Reboot.cgi">$(gt "Reboot system")</a></li>
+       <li><a id="btopserver" href="/BTopLocalServer/index.php">BlueCount Server</a></li>
+       <li><a id="security" href="/cgi-bin/security/security.cgi">$(gt "Security Access")</a></li>
+       <li>$HTML</li>
+      </ul></div></td>
+      <td><div class="linkList"><ul>
+       <li><a id="log" href="DisplayLog.cgi">$(gt "Logs")</a></li>
+       <li>$HTML_E32</li>
+       <li><a id="keyboard" href="/cgi-bin/Keyboard/KeyboardConfiguration.cgi">$(gt "Keyboard")</a></li>
+       <li>$HTML</li>
+      </ul></div></td> 
+      <td><div class="linkList"><ul>
+       <li><a id="time" href="Date.cgi">$(gt "Time & Date")</a></li>
+       <li><a id="update" href="/cgi-bin/SystemUpdate/SystemUpdateMenu.cgi">$(gt "System update")</a></li>
+       <li><a id="help" target="_blank" rel="nofollow" href="help.cgi">$(gt "Inline Help")</a></li>
+       <li>$HTML</li>
+      </ul>
+      </div></td>
+     </tr>      
+    </table>   
+   </div>
+
+   <div id="status">
+    $HTML_SYSTEMSTATUS
+EOF
+

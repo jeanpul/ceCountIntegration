@@ -1,0 +1,9 @@
+cat <<EOF
+   </div>
+   <div id="foot">
+    <p>2009 BlueEyeVideo All rights reserved</p>
+   </div>
+  </div>
+ </body>
+</html>
+EOF

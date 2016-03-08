@@ -1,0 +1,573 @@
+/**
+ *  Feuille de style pour le site de
+ *  BlueEyeVideo préparé par fab.
+ *  contact: fabien.pelisson@blueeyevideo.com
+ */
+
+body {
+     color: white;
+     background: #666666;
+     font-family: Arial, Helvetica, Verdana, Sans;
+     font-size: 12pt;
+}
+
+#main {
+     background: none;
+     margin: auto;
+     padding: 0px 0px;
+     width: 800px;
+     height: 100%;
+}
+
+#desc {
+    background: #4b73c2;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+#desc textarea {
+    width: 94%;
+}
+
+
+#status {
+    text-align: right;
+    background: #052146;
+    margin: 0px 0px;
+    padding-bottom: 0px;
+    padding-left:   0px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#status h3 {
+    text-align: right;
+    margin: 0px 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#status form {
+    margin: 0 0;
+    padding: 0 0;
+    cursor: pointer;
+}
+
+#status input {
+    margin: 0 0;
+    padding: 0 0;
+    cursor: pointer;
+}
+
+#desc h1 {
+    background: #052146;
+    margin: 0px 0px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+#descHeader {
+    background: #052146;
+    margin: 0px 0px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+#descHeader h1 {
+   text-align: left;
+}
+
+#descHeader a {
+   text-align: right;
+}
+
+#desc h2 {
+   text-align: center;   
+}
+
+#desc h3 {
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+#desc ul {
+    margin-left: 40px;	
+    padding-left: 20px;
+}
+
+#desc p {
+    margin: 0px 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 5px;    
+    padding-left: 20px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
+#top {
+     background:transparent url(HRUp.gif) no-repeat center top;
+     margin: 0px 0px;
+     padding-top: 20px;
+     width: 100%;
+}
+
+#menu {
+     text-align: left;
+     width: 100%;
+     background: #083e88;
+     margin: 0px 0px;
+}
+
+#menu ul {
+     text-align: left;
+     margin: 0px 0px;
+     width: 100%;
+}
+
+#menu li {
+     
+}
+
+#submenu {
+    font-size: 90%;
+    background: #052146;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+#submenu a {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-right: solid 1px;
+}
+
+#submenu li {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    list-style-type: none;
+}
+
+a:link, a:visited {
+     color: white;
+     font-weight: bold;
+     text-decoration: underline;
+}
+
+a:hover, a:active {
+     color: yellow;
+     text-decoration: underline;
+}
+
+#logo {
+     text-align: left;
+     width: 100%;
+     margin: 0px 0px;
+}
+
+.classic {
+     width: 100%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 0px;
+     margin-bottom: 0px;
+}
+
+table.classic tr td {
+     text-align: justify;
+}
+
+/*
+table {
+     width: 100%;
+     text-align: justify;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 0px;
+     margin-bottom: 0px;
+}
+
+table tr td {
+     text-align: justify;
+}
+*/
+table.head {
+     background: #083e88;
+     width: 100%;
+     margin: 0px 0px;
+     padding: 0px 0px;
+}
+
+table.partners {
+     width: 80%;
+}
+
+table.contact {
+     border: solid 1px;
+     text-align: center;
+     width: 50%;
+}
+
+table.contact td {
+     width: 100%;
+     vertical-align: top;
+     text-align: left;
+}
+
+table.adress {
+     border: solid 1px;
+     width: 50%;
+     text-align: center;
+}
+
+table.adress td {
+     width: 0%;
+     text-align: left;
+}
+
+#foot {
+     background:transparent url(HRDown.gif) no-repeat center bottom;
+     margin: 0px 0px;     
+     padding-bottom: 20px;
+     width: 100%;
+}
+
+#foot p {
+     background: #083e88;
+     font-size: 80%;
+     margin: 0px 0px;     
+     padding: 0px 0px;
+     padding-left: 10px;     
+}
+
+div.linkList {
+	  margin: auto;
+}
+
+div.linkList ul {
+	  text-align: left;
+	  text-decoration: none;
+	  padding: 15px 15px;
+	  margin: 15px 15px;
+	  list-style: none;
+}
+
+div.linkList li {
+	  text-align: left;
+	  display: block;
+	  text-decoration: none;
+}
+
+div.linkList a {
+	  padding-top: 48px;
+	  text-align: center;
+	  height: 64px;
+	  width: 96px;
+	  display: block;
+	  text-decoration: none;
+	  color: white;
+	  font-weight: bold;
+}
+
+div.linkList a:hover, a:active {
+     text-decoration: underline;
+}
+
+
+#network {
+	background: url(network.gif) no-repeat top center;
+}
+
+#module {
+	background: url(module.gif) no-repeat top center;
+}
+
+#moduleOff {
+	 padding-top: 48px;
+	 text-align: center;
+	 height: 64px;
+	 width: 96px;
+	 display: block;
+	 text-decoration: none;
+	 color: gray;
+	 font-weight: bold;
+	 background: url(moduleOff.gif) no-repeat top center;
+}
+
+
+
+#networkOff {
+	 padding-top: 48px;
+	 text-align: center;
+	 height: 64px;
+	 width: 96px;
+	 display: block;
+	 text-decoration: none;
+	 color: gray;
+	 font-weight: bold;
+	 background: url(networkOff.gif) no-repeat top center;
+}
+
+#dummy {
+         padding-top: 48px;
+         text-align: center;
+         height: 64px;
+         width: 96px; 
+         display: block;
+         text-decoration: none;
+         color: gray;
+         font-weight: bold;
+}
+
+
+#harddisk {
+	background: url(harddisk.gif) no-repeat top center;
+}
+
+#hardiskOff {
+	 padding-top: 48px;
+	 text-align: center;
+	 height: 64px;
+	 width: 96px;
+	 display: block;
+	 text-decoration: none;
+	 color: gray;
+	 font-weight: bold;
+	 background: url(harddiskOff.gif) no-repeat top center;
+}
+
+#reboot {
+	background: url(reboot.gif) no-repeat top center;
+}
+
+
+#video {
+	background: url(TestVideo.gif) no-repeat top center;
+}
+
+#backupRestore {
+	background: url(backupRestore.gif) no-repeat top center;
+}
+
+#backupRestoreOff {
+	 padding-top: 48px;
+	 text-align: center;
+	 height: 64px;
+	 width: 96px;
+	 display: block;
+	 text-decoration: none;
+	 color: gray;
+	 font-weight: bold;
+	 background: url(backupRestoreOff.gif) no-repeat top center;
+}
+
+#backup {
+	background: url(backup.gif) no-repeat top center;
+}
+
+#backupOff {
+	 padding-top: 48px;
+	 text-align: center;
+	 height: 64px;
+	 width: 96px;
+	 display: block;
+	 text-decoration: none;
+	 color: gray;
+	 font-weight: bold;
+	 background: url(backupOff.gif) no-repeat top center;
+}
+
+#restore {
+	background: url(restore.gif) no-repeat top center;
+}
+
+#restoreOff {
+	 padding-top: 48px;
+	 text-align: center;
+	 height: 64px;
+	 width: 96px;
+	 display: block;
+	 text-decoration: none;
+	 color: gray;
+	 font-weight: bold;
+	 background: url(restoreOff.gif) no-repeat top center;
+}
+
+#clear {
+	background: url(trash.gif) no-repeat top center;
+}
+
+#clearOff {
+	 padding-top: 48px;
+	 text-align: center;
+	 height: 64px;
+	 width: 96px;
+	 display: block;
+	 text-decoration: none;
+	 color: gray;
+	 font-weight: bold;
+	 background: url(trashOff.gif) no-repeat top center;
+}
+
+#help {
+	background: url(help.gif) no-repeat top center;
+}
+
+#time {
+	background: url(time.gif) no-repeat top center;
+}
+
+#running {
+	background: url(BoutonOn.gif) no-repeat center right;
+}
+
+#runningfalse {
+	background: url(BoutonOrange.gif) no-repeat center right;
+}
+
+#stopped {
+	background: url(BoutonOff.gif) no-repeat center right;
+}
+
+#errorstatus {
+	background: url(Error.gif) no-repeat center right;
+}
+
+#log {
+	background: url(log.gif) no-repeat top center;
+}
+
+submit:hover {
+
+}
+
+#apply {
+	text-align: left;
+	margin-left: 65%;
+	color: white;
+	border: none;
+	border-color: white;
+	background: url(Apply.gif) no-repeat center right;
+	height: 50px;
+	font-size: 150%;
+	padding: 0 0;
+	padding-right: 60px;
+	cursor: pointer;
+}
+
+#barHome {
+    text-align: right;
+    background: #052146;
+    margin: 0px 0px;
+    padding-bottom: 0px;
+    padding-left:   0px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#barHome form {
+      margin-top: 0px;
+      margin-bottom: 0px;
+}
+
+#barHome input {
+    cursor: pointer;
+}
+
+#Home {
+	text-align: right;	
+	color: white;
+	border: none;
+	border-color: white;
+	background: url(Home.gif) no-repeat center right;
+	height: 50px;
+	padding: 0 0;
+	padding-right: 50px;	
+	margin: 0 0;
+	font-size: 150%;
+	cursor: pointer;
+}
+
+#form {
+	background: none;
+	width: 50%;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 120%;
+}
+
+#formWide {
+	background: none;
+	width: 80%;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 120%;
+}
+
+#error {
+	border: none;
+	background: url(Error.gif) no-repeat top left;
+	width: 60%;
+	padding: 20px 20px;
+	padding-left: 64px;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 150%;
+	color: white;
+}
+
+#error p {
+	padding-top: 20px;
+}
+
+#error h1 {
+	background: none;
+	margin: 0 0;
+	padding: 0 0;
+	color: white;
+	font-size: 150%;
+}
+
+#info {
+	width: 60%;
+	padding: 20px 20px;
+	padding-left: 64px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 150%;
+	color: white;
+}
+
+#infoSmall {
+	border: solid 1px;
+	text-align: justify;
+	margin: auto;
+	margin-top: 20px;
+	padding: 5px 5px;
+	width: 80%;
+	color: white;
+	font-size: 120%;
+}
+
+#textoff {
+	color: gray;
+}
+
+#logArea {
+	background: white;
+	margin: 20px 20px;
+}

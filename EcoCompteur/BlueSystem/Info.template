@@ -1,0 +1,34 @@
+
+if [ -n "$HTML_MESSAGE" ]; then
+
+cat <<EOF
+<div id="info">
+<p>
+$HTML_MESSAGE
+</p>
+</div>
+EOF
+
+fi
+
+if [ "$2" != "" ] ; then
+cat <<EOF
+<div id="barHome">
+<form action="$1" method="get">
+<input type="hidden" name="action" value="Cancel" />
+EOF
+
+if [ -n "$HTML_FileToRemove" ]; then
+cat <<EOF
+<input type="hidden" name="tmpfile" value="$HTML_FileToRemove" />
+EOF
+fi
+
+cat <<EOF
+<button id="Home" type="submit" value="$2" >$2</button>
+</form>
+</div>
+EOF
+else
+    HTML_display_Home
+fi

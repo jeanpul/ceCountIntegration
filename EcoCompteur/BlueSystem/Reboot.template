@@ -1,0 +1,14 @@
+cat <<EOF
+<div id="info">
+ <p>`gt "WARNING : Rebooting the system will stop all current applications."`</p>
+</div>
+<div id="form">
+ <form action="Reboot.cgi" method="get">
+  <input type="hidden" name="reboot" value="Yes" />
+  <button id="apply" type="submit" value="`gt "Apply"`">`gt "Apply"`</button>
+ </form>
+</div>
+EOF
+HTML_display_Home
+
+

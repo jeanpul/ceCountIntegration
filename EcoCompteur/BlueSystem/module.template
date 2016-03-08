@@ -1,0 +1,7 @@
+cat <<EOF	
+
+ <table>
+$HTML_MODULE_LIST
+ </table>
+
+EOF

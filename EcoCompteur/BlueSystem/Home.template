@@ -1,0 +1,18 @@
+
+caller=/cgi-bin/BlueSystem/index.cgi
+backTitle="$(gt "Back to main menu")"
+
+if [ -n "$2" ] ; then
+    caller=$2.cgi
+    backTitle=`echo $3 | urldecode`
+fi
+
+cat <<EOF
+<div id="barHome">
+ <form action="$caller" method="get">
+  <input type="hidden" name="action" value="Cancel" />
+  <button id="Home" type="submit" value="$backTitle" >$backTitle</button>
+ </form>
+</div>
+EOF
+

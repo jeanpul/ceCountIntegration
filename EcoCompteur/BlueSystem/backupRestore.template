@@ -1,0 +1,54 @@
+
+if [ "$QS_action" = "CLEAR" ]; then
+
+cat <<EOF
+ <div id="infoSmall">
+  <p> `gt "Warning"` :  "`gt "Clear all settings"`" 
+      `gt "implies you lose all configuration done on channels, and also blueHTTP server for communication of data, and for system update."`
+      `gt "The configuration is reseted to initial state."`
+      `gt "The module configurations are also reinitialized."`
+  </p>
+ </div>
+ <div id="form">
+  <form action="backupRestore.cgi"" method="get">
+   <input type="hidden" name="do" value="1" />
+   <input  type="hidden" name="action" value="$QS_action" />
+   <input type="submit" value="`gt "Clear all settings"`"/>
+  </form>
+ </div>
+EOF
+
+HTML_display_Info backupRestore.cgi "`gt "Back to backup/restore menu"`"
+
+else
+
+# BACKUP - RESTORE MENU
+
+cat <<EOF
+<table>
+ <tr>
+  <td>
+   <div class="linkList"><ul>
+   <li><a id="backup" href="backup.cgi">`gt "Backup"`</a></li>
+   </ul></div>
+  </td>
+  <td>
+   <div class="linkList"><ul>
+    <li><a id="restore" href="restore.cgi">`gt "Restore"`</a></li>
+   </ul></div>
+  </td>
+  <td>
+   <div class="linkList"><ul>
+    <li><a id="clear" href="backupRestore.cgi?action=CLEAR">`gt "Clear"`</a></li>
+   </ul></div>
+  </td>
+ </tr>
+</table>
+EOF
+
+HTML_display_Home
+
+fi
+
+
+

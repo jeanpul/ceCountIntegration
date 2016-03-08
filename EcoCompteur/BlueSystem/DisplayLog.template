@@ -1,0 +1,36 @@
+if [ "$2" = "true" ] ; then
+cat <<EOF
+<div id="form">
+<form action="DisplayLog.cgi" method="GET">
+ `gt "Type"` :
+ <select name="type" onChange="submit();" >
+  $HTML_OPTIONS
+ </select>
+ <input type="submit" value="`gt "View"`" />
+</form>
+</div>
+EOF
+fi
+
+cat <<EOF
+<h2>$LOG_TITLE</h2>
+<textarea id="logArea" rows="20" wrap="off" readonly>
+EOF
+
+tac $logfile
+
+cat <<EOF
+</textarea>
+
+EOF
+
+if [ "$2" = "true" ] ; then
+cat <<EOF
+<form action="ExportLog.cgi" method="get">
+<p><input type="submit" value="`gt "Export log"`"/></p>
+</form>
+EOF
+
+fi
+
+

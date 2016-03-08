@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" ></meta>
 <link rev="made" href="mailto:fabien.pelisson@blueeyevideo.com" ></link>
 <link rel="stylesheet" type="text/css" href="styles/blueeyevideo.css"/>
-<link rel="stylesheet" type="text/css" href="/BlueSystem/styles/StyleBlueEyeVideo.css"/>
+<link rel="stylesheet" type="text/css" href="BlueSystem/styles/StyleBlueEyeVideo.css"/>
 </head>
 <body>
 <div id="main">
@@ -13,8 +13,7 @@
 <div id="top">
 <table class="head">
 <tr>
-<td><div id="logo"><img src="/BlueSystem/styles/LogoStyle.gif" alt="logo BEV"/></div></td>
-<td><div align="center"><h3>EcoCompteur Configuration Rev. 1</h3></div></td>
+<td><div align="left"><h3>EcoCompteur Configuration Rev. 1</h3></div></td>
 </tr>
 </table>
 </div>
@@ -24,7 +23,9 @@
 </div>
 
 <div id="foot">
-<p>2009 BlueEyeVideo All rights reserved</p>
+<p>2016 - managed by Codeffekt - 
+<a target="_blank" rel="nofollow" href="https://github.com/jeanpul/">github</a>
+</p>
 </div>
 
 </div>

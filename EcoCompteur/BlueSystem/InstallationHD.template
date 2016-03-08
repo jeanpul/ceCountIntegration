@@ -1,0 +1,32 @@
+if [ ${#SYSTEM_HDS[@]} -eq 1 ] ; then
+
+cat <<EOF
+<div id="formWide">
+<form action="Installation.cgi" method="get">
+<h3><u>`gt "Hard drive selection"`</u></h3>
+`gt "One available hard drive device"` : ${SYSTEM_HDS[0]}
+<input type="hidden" name="HDDEV" value="${SYSTEM_HDS[0]}"/>
+<button id="apply" type="submit" value="`gt "Next"`">`gt "Next"`</button>
+</form>
+</div>
+EOF
+
+else
+
+cat <<EOF
+<div id="formWide">
+<form action="Installation.cgi" method="get">
+<h3><u>`gt "Hard drive selection"`</u></h3>
+`gt "Available hard drive devices"`
+<select name="HDDEV">
+$HTML_OPTIONS
+</select>
+<button id="apply" type="submit" value="`gt "Next"`">`gt "Next"`</button>
+</form>
+</div>
+EOF
+
+fi
+
+HTML_display_Home
+

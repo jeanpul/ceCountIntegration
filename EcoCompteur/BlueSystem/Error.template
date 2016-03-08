@@ -1,0 +1,22 @@
+cat <<EOF
+<div id="error">
+<h1><u>`gt "Error message"` :</u></h1>
+<p>
+$HTML_MESSAGE
+</p>
+</div>
+EOF
+
+
+if [ "$2" != "" ] ; then
+cat <<EOF
+<div id="barHome">
+<form action="$1" method="get">
+<input type="hidden" name="action" value="Cancel" />
+<button id="Home" type="submit" value="$2" />$2</button>
+</form>
+</div>
+EOF
+else
+    HTML_display_Home
+fi

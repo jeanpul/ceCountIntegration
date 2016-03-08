@@ -1,0 +1,15 @@
+cat <<EOF
+<div id="formWide">
+<form action="Installation.cgi" method="get" >
+<input type="hidden" name="HDDEV" value="$QS_HDDEV" />
+<input type="hidden" name="NETDEV" value="$QS_NETDEV" />
+<h3><u>3/$NSTEP `gt "Network configuration"`</u></h3>
+EOF
+HTML_display BlueSystem/NetworkTable
+cat <<EOF
+<button id="apply" type="submit" value="`gt "Next"`">`gt "Next"`</button>
+</form>
+</div>
+EOF
+HTML_display_Home
+

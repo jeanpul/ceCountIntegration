@@ -1,0 +1,45 @@
+if [ -z "$QS_do" ]; then
+
+#BACKUP START MENU
+
+cat <<EOF
+<div id="formWide">
+ <form action="backup.cgi" method="get">
+  $HTML_MODULES_LIST
+  <input type="hidden" name="do" value="1" />
+  <input type="submit" value="`gt "Prepare for export"`">
+ </form>
+</div>
+EOF
+
+else
+
+#BACKUP 
+
+cat <<EOF
+
+<h3>`gt "Archive Content"`</h3>
+<ul>
+ $LIST_TO_EXPORT
+</ul>
+
+<h3>`gt "Obtain the archive"`</h3>
+<ul>
+<li>`gt "Download"` : <a href="/$BACKUP_ArchiveName">$BACKUP_ArchiveName</a></li>
+
+<!--
+<li>`gt "Copy to usb storage device"` : 
+<form action="backup.cgi" method="get">
+ <input type="hidden" name="do" value="2" />
+ <input type="submit" value="`gt "Transfert"`" $TRANSFERT_DISABLED />
+</form>
+</li>
+-->
+</ul>
+EOF
+
+
+fi
+
+HTML_MESSAGE=
+HTML_display_Info backupRestore.cgi "`gt "Back to backup/restore menu"`"

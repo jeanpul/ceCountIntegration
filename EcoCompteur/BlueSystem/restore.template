@@ -1,0 +1,59 @@
+
+if [ $QS_step -eq 0 ]; then
+cat <<EOF
+
+<h3>`gt "Upload an archive"`</h3>
+<form action="restore.cgi" enctype="multipart/form-data" method=POST >
+ `gt "Upload file"` <input type=file name="upfile">
+<button id="apply" type="submit" value="`gt "Apply"`">`gt "Apply"`</button>
+</form>
+
+EOF
+
+#cat <<EOF
+#<h3>`gt "Copy an archive from usb storage device"`</h3>
+#EOF
+#
+#    if [ -n "$LIST_FILE" ]; then
+#
+#cat <<EOF
+#
+#<form action="restore.cgi" method="get">
+# <ul>$LIST_FILE</ul>
+# <input type="hidden" name="step" value="1" />
+#<button id="apply" type="submit" value="`gt "Apply"`">`gt "Apply"`</button>
+#</form>
+#
+#EOF
+#    else
+#cat <<EOF
+#`gt "No usb device or no archive found."`
+#EOF
+#    fi
+
+elif [ $QS_step -eq 1 ]; then
+
+cat <<EOF
+<h3>Archive Description:</h3>
+<p>MD5SUM : $RESTORE_MD5SUM</p>
+<p>$HTML_MESSAGE</p>
+EOF
+
+    if [ -n "$LIST_IMPORT" ]; then
+
+cat <<EOF
+<h3>`gt "Import"`</h3>
+<form action="restore.cgi" method="get">
+ <ul>
+ $LIST_IMPORT
+ </ul>
+ <input type="hidden" name="step" value="2"/>
+ <p><input type="submit" value="`gt "Import"`"></p>
+</form>
+EOF
+
+    fi
+fi
+
+HTML_MESSAGE=
+HTML_display_Info backupRestore.cgi "`gt "Back to backup/restore menu"`"

@@ -1,0 +1,73 @@
+
+#WIDTH=750
+#HEIGHT=500
+
+cat <<EOF
+<script type="text/javascript">
+ <!--
+  if(parent.frames.length) parent.location.href = self.location;
+  function checklen(target) {
+   var max = 300;
+   if (target.value.length > max) {
+    target.value = target.value.substring(0, max);
+   } else {
+    reste = max - target.value.length;
+   }
+   document.getElementById("caracteres").value = reste;
+  }
+  function clearform() {
+   setTimeout("document.getElementById(\"caracteres\").value = 300", 100);
+   setTimeout("document.getElementById(\"message\").value = \"\"", 100);
+   document.getElementById("message").focus();
+   return true;
+  }
+ //-->
+</script>
+<script type="text/javascript">
+<!--
+ go = 0;
+ function change() {
+  temps = new Date();
+  document.getElementById("webcam").src = "webcam.php?" + temps.getTime();
+ }
+ function start() {
+  if(go == 0) {
+   change()
+   interval = setInterval("change()", 2000);
+   go = 1;
+  }
+ }
+ function stop() {
+  if(go == 1) {
+   clearInterval(interval);
+   go = 0;
+  }
+ }
+ function com() {
+  window.open("com/com.php", "", "toolbar=no, location=no, directories=no, status=no, scrollbars=no, resizable=no, width=170, height=180");
+ }
+ function startcom() {
+  start();
+  com();
+ }
+//-->
+</script>
+<center>
+<object id="Player" width="$WIDTH" height="$HEIGHT" classid="CLSID:DE625294-70E6-45ED-B895-CFFA13AEB044" codebase="http://www.serveurperso.com:81/activex/AMC.cab#version=3,32,19,0">
+ <param name="MediaURL" value="$SOURCE" />
+ <param name="MediaType" value="mjpeg-unicast" />
+ <param name="ShowToolbar" value="0" />
+ <param name="ShowStatusBar" value="0" />
+ <param name="AutoStart" value="1" />
+ <param name="StretchToFit" value="1" />
+ <script type="text/javascript">
+  <!--
+   temps=new Date();
+   document.write('<img src="$SOURCE" width="$WIDTH" height="$HEIGHT" alt="Webcam JavaScript" />');
+  //-->
+ </script>
+</object>
+</center>
+
+EOF
+

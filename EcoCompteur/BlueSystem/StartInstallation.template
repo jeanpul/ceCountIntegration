@@ -1,0 +1,9 @@
+cat <<EOF
+<div id="info">
+<center>
+<h2><image src="/BlueSystem/styles/cd.gif" width="50" height="46"/> `gt "$INSTALL_MSG"`</h2>
+</center>
+</div>
+<div id="barHome">
+</div>
+EOF

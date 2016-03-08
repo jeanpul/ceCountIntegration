@@ -1,0 +1,22 @@
+cat <<EOF
+
+<script src="/jscripts/BlueSystem/XmlHttp.js"></script>
+<script src="/jscripts/BlueSystem/ExportLog.js"></script>
+
+<span id="ExportLog">$(gt "Please wait until the archive is finished...")</span>
+
+<script type="text/javascript">
+showExportLog(); 
+</script>
+
+<p>
+<ul>
+<li>`gt "Archive creation date:"` <span id="date"></span></li>
+<li>`gt "Size:"` <span id="size"></span></li>
+<li>$(gt "Md5sum:") <span id="md5sum"></span></li>
+<li>`gt "Click on the following link to download the archive:"` <span id="filename"></span></li>
+</ul>
+</p>
+
+EOF
+

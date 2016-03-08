@@ -1,0 +1,31 @@
+cat <<EOF
+
+<h2><u>$(gt "Inline documentation")</u></h2>
+
+<p><a href="/Docs/UsersManualEn/index.html">Users Manual</a></p>
+<p><a href="/Docs/UsersManualFr/index.html">Manuel utilisateur</a></p>
+EOF
+
+if [ -n "$HTML_DOCS" ]; then
+cat <<EOF
+<h2><u>$(gt "Externals documentations")</u></h2>
+<ul>
+$HTML_DOCS
+</ul>
+EOF
+fi
+
+cat <<EOF
+<h2><u>$(gt "Contact")</u></h2>
+<p>$(gt "Email") : support@blueeyevideo.com</p>
+
+<div id="barHome">
+<center>
+<form method="post">
+<input type="button" value="Close Window"
+onclick="window.close()">
+</form>
+</center>
+</div>
+
+EOF

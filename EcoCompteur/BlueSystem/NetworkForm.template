@@ -1,0 +1,27 @@
+cat <<EOF
+<form action="NetworkConfiguration.cgi" method="get" >
+<h3><u>Please, fill the network values</u></h3>
+<table>
+<tr>
+<td>IP address</td>
+<td><input maxlength="16" size="16" name="IPADDRESS" value="$IPADDR" /></td>
+</tr>
+<td>Mask</td>
+<td><input maxlength="16" size="16" name="IPMASK" value="$NETMASK" /></td>
+</tr>
+<td>Gateway</td>
+<td><input maxlength="16" size="16" name="IPGATEWAY" value="$GATEWAY" /></td>
+</tr>
+<td>DNS</td>
+<td><input maxlength="16" size="16" name="IPDNS" value="$DNSSERVER" /></td>
+</tr>
+</table>
+<input type="submit" value="Set" />
+</form>
+<div id="headerInside">
+<form action="index.cgi" method="get">
+<input type="hidden" name="action" value="Cancel" />
+<input type="submit" value="Cancel" />
+</form>
+</div>
+EOF

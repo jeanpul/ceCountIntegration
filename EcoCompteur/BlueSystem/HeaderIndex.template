@@ -1,0 +1,33 @@
+
+echo -ne "Content-Type: text/html; charset=iso-8859-1\r\n\r\n"
+
+cat <<EOF
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ <head>
+  <title>$HTML_TITLE</title>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></meta>
+  <meta name="copyright" content="Copyright 2009, BlueEyeVideo"></meta>
+  $HTML_META
+  <link rel="stylesheet" type="text/css" href="$HTML_CSS"/>
+ </head>
+ <body>
+  <div id="main">
+   <div id="top">
+    <table summary="head" class="head">
+     <tr>
+      <td><div id="logo"><img src="$HTML_LOGO" alt="logo BEV"/></div></td>
+      <td><div align="right"><h3>$BLUESYSTEM_REFERENCE</h3><h3>$(gt "Client Id:") $BLUESYSTEM_CLIENTID</h3></div></td>
+     </tr>
+    </table>
+   </div>
+   <div id="descHeader">
+    <table summary="head" class="classic" ><tr>
+     <td><h2>$HTML_SUBTITLE</h2></td>
+     <td align="right">
+      $LANG_OPTION
+     </td>
+    </tr></table>
+   </div>
+   <div id="desc">
+EOF

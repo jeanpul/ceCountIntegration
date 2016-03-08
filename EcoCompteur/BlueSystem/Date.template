@@ -1,0 +1,69 @@
+cat <<EOF
+
+<script src="/jscripts/BlueSystem/Date.js"></script>
+
+<div id="formWide">
+<form action="Date.cgi" method="get" name="DateForm">
+<h3><input type="radio" id="timeMethodLocal" name="timeMethod" value="local" $HTML_LOCAL_CHECKED onclick="checkDateForm()" /><u>`gt "Local date and time"`</u></h3>
+<table><tr>
+
+<td>
+<select name="YEAR">
+$HTML_YEAROPTIONS
+</select>
+/
+<select name="MONTH">
+$HTML_MONTHOPTIONS
+</select>
+/
+<select name="DAY">
+$HTML_DAYOPTIONS
+</select>
+
+---
+
+<select name="HOUR">
+$HTML_HOUROPTIONS
+</select>
+:
+<select name="MINUTE">
+$HTML_MINOPTIONS
+</select>
+:
+<select name="SECOND">
+$HTML_SECOPTIONS
+</select>
+</td>
+
+</tr></table>
+
+<h3><input type="radio" id="timeMethodNTP" name="timeMethod" value="ntp" $HTML_NTP_CHECKED $HTML_DISABLENTP onclick="checkDateForm()" /><u>`gt "NTP Server"`</u></h3>
+<p>`gt "You can synchronize your computer with a server through NTP."` `gt "An example of server NTP"` : europe.pool.ntp.org</p>
+<p>`gt "Server"` : <input type="text" maxlength="255" size="32"
+			  name="NTPServer" value="$DATE_NTPServer"
+			  $HTML_DISABLENTP/></p>
+<p>$(gt "If you check this box then others computers could use this computer as a time server.")</p>
+<p><input type="checkbox" name="timeServer" $HTML_NTPSERVER_CHECKED
+	  $HTML_DISABLENTP />$(gt "is a time server")</p>
+
+<h3><input type="radio" id="timeMethodTime" name="timeMethod" value="time" $HTML_TIME_CHECKED $HTML_DISABLERDATE onclick="checkDateForm()" /><u>`gt "Time Server (RFC868 protocol)"`</u></h3>
+
+<p>`gt "Server"` : <input type="text" maxlength="255" size="32" name="RdateServer" value="$DATE_RdateServer" /></p>
+
+
+<h3><u>`gt "Time Zone"`</u></h3>
+<p><select name="TIMEZONE" $HTML_TZ_DISABLED>
+$HTML_TZOPTIONS
+</select>
+<button id="apply" type="submit" value="`gt "Apply"`">`gt "Apply"`</button>
+</form>
+</div>
+
+<!-- 
+Call explicitly a function to enable/disable the form properties.
+-->
+<script type="text/javascript"> checkDateForm(); </script>
+
+EOF
+HTML_display_Home
+

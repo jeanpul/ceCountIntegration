@@ -1,0 +1,16 @@
+cat <<EOF
+<div id="form">
+<form action="NetworkConfiguration.cgi" method="get" >
+<h3><u>`gt "Please, fill the network values"`</u></h3>
+<input type="hidden" name="MACADDRTEST" value="$MACADDRTEST">
+EOF
+HTML_display BlueSystem/NetworkTable
+cat <<EOF
+<button id="apply" type="submit" value="`gt "Apply"`">`gt "Apply"`</button>
+</form>
+</div>
+EOF
+HTML_display_Home
+
+
+

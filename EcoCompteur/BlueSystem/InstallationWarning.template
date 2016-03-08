@@ -1,0 +1,20 @@
+#cat <<EOF
+#<div id="infoSmall">
+#<p>
+#`gt "Before doing the installation procedure, check that you have a valid license number."`
+#`gt "This license number is given by BlueEyeVideo from the reference number displayed at the main page."`
+#`gt "A reference number value set to"` <b>none</b> `gt "means that you cannot install a BlueEyeVideo software for this computer or you only have a limited demonstration CD."`
+#`gt "Please contact BlueEyeVideo for more information."`
+#</p>
+#</div>
+#EOF
+
+cat <<EOF
+<div id="infoSmall">
+<p>
+`gt "WARNING The installation on hard disk will destroy all data on the selected hard drive device."`
+`gt "A reference number value set to"` <b>none</b> `gt "means that you cannot install BlueEyeVideo software on this computer or you only have a limited demonstration CD."`
+`gt "Please contact BlueEyeVideo for more information."`
+</p>
+</div>
+EOF

@@ -77,6 +77,7 @@ class EcoCompteurs extends ModuleProcessing
     return ($data and 
 	    count($data) == 2 and 
 	    strlen($data[0]) == 8 and 
+	    substr($data[0], 0, 3) != "log" and 
 	    $data[1] == "csv" and
 	    mktime(0, 0, 0,
 		   substr($data[0], 4, 2),
