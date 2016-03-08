@@ -1,0 +1,13 @@
+<h1><?php echo $this->getTitle(); ?></h1>
+
+<div id="form" class="Boxes">
+<?php echo $this->handleAction($this->getParams(), "EcoCompteurs.php",
+getBluePortailInputs()); ?>
+</div>
+
+<div id="barHome">
+<form action="EcoCompteurs.php" method="get">
+<?php echo getBluePortailInputs(); ?>
+<button id="Home" type="submit" value="Back to EcoCompteurs" >Back to EcoCompteurs</button>
+</form>
+</div>

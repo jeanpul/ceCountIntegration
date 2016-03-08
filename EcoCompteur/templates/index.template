@@ -1,0 +1,29 @@
+<h1>
+Main menu
+</h1>
+
+<div class="linkList">
+<table>
+<tr>
+<td><ul>
+
+<li><a id="ecocompteur" href="<?php echo getBluePortailURL("EcoCompteurs.php"); ?>">Compteurs</a></li>
+
+</ul></td>
+<td><ul>
+
+<li><a id="log" href="<?php echo getBluePortailURL("Status.php"); ?>">System status</a></li>
+
+</ul></td>
+
+</tr>
+</table>
+
+</div>
+
+<div id="barHome">
+<form action="/cgi-bin/BlueSystem/index.cgi" method="get">
+<button id="Home" type="submit" value="Back to BlueSystem" >Back to BlueSystem</button>
+
+</form>
+</div>
