@@ -1,6 +1,6 @@
 <?php
 
-include_once("BluePHP/DBConnect.inc");
+include_once("DBConnect.inc");
 
 class ModuleProcessing
 {
