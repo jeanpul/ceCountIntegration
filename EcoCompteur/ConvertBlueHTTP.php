@@ -53,6 +53,12 @@ function Eco_getBlueHTTP($eco, $rowValue)
     "&counter1=1&value1=" . $rowValue["value1"];
 }
 
+// should be overloaded in ConfigBluePortail
+if(!defined("BLUEHTTP_USLEEP"))
+  {
+    define('BLUEHTTP_USLEEP', 250000);
+  }
+
 $emodule = new EcoCompteurs();
 $entries = $emodule->getEntries();
 
@@ -76,6 +82,7 @@ foreach($entries as $ecoKey => $ecoObj)
     
     $nbProcessed = 0;
     echo "<ConvertBlueHTTP> process ";
+
     foreach($values as $k => $v)
       {
 	$processed = false;
@@ -98,7 +105,7 @@ foreach($entries as $ecoKey => $ecoObj)
 		
 		$processed = "+";
 		++$nbProcessed;
-		usleep(250000);
+		usleep(BLUEHTTP_USLEEP);
 	      }
 	    else
 	      {
@@ -114,6 +121,7 @@ foreach($entries as $ecoKey => $ecoObj)
     echo " $nbProcessed\n";
 
     echo "<ConvertBlueHTTP> status entry for EcoCompteur " . $ecoObj["id"] . " / " . $ecoObj["clientId"] . 
-      " with file " . $status["file"] . " and last date processed " . $status["lastDate"] . "\n";
+      " with file " . $status["file"] . 
+      (isset($status["lastDate"]) ? " and last date processed " . $status["lastDate"] : " no data processed") . "\n";
   }
 ?>

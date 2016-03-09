@@ -60,4 +60,9 @@ define ('DATADBUSER', "blue");
 define ('DATADBPASSWD', "blue4eye");
 define ('DATADBPATH', SM_SERVER_DBPATH);
 
+/**
+ * usleep amount of time between two BlueHTTP post
+ */
+define('BLUEHTTP_USLEEP', 250000);
+
 ?>

@@ -33,7 +33,9 @@ class EcoCompteurs extends ModuleProcessing
       {
 	$filename = $this->getCountingFileName($date);
 	$temp = tmpfile();
-	if(ftp_fget($con, $temp, $filename, FTP_BINARY))
+
+	if(ftp_size($con, $filename) != -1 and
+	   ftp_fget($con, $temp, $filename, FTP_BINARY))
 	  {	    	 
 	    fseek($temp, 0);
 	    $numColValue0 = false;
@@ -47,13 +49,17 @@ class EcoCompteurs extends ModuleProcessing
 		if($haveNumCols)
 		  {
 		    $colValues = explode(",", $line);		    
-		    // convert date into YYY-MM-DD HH:MM:SS
-		    $str[] = array( "date" => substr($colValues[$numColDate], 6, 4) . "-" . 
-				    substr($colValues[$numColDate], 3, 2) . "-" . 
-				    substr($colValues[$numColDate], 0, 2) . " " .
-				    $colValues[$numColHour],
-				    "value0" => $colValues[$numColValue0],
-				    "value1" => $colValues[$numColValue1] );
+
+		    if(count($colValues) >= 4)
+		      {
+			// convert date into YYY-MM-DD HH:MM:SS
+			$str[] = array( "date" => substr($colValues[$numColDate], 6, 4) . "-" . 
+					substr($colValues[$numColDate], 3, 2) . "-" . 
+					substr($colValues[$numColDate], 0, 2) . " " .
+					$colValues[$numColHour],
+					"value0" => $colValues[$numColValue0],
+					"value1" => $colValues[$numColValue1] );
+		      }
 		  }
 		else if(stripos($line, $this->colNameString))
 		  {
