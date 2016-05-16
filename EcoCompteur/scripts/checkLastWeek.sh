@@ -5,11 +5,15 @@
 CLIENTBLUEPORTAIL=$1
 
 DATE=$(date +%Y%m%d)
-HISTORY=2
-CMD=checkLastWeek
+HISTORY=20
 
-if [ $(ps -e | grep -c $CMD) -gt 2 ]; then
-    Logs_add $0 "Instance already running cannot perform check for date $DATE and $HISTORY days"
+if [ $(ps -ef | grep -v grep | grep -c checkLastWeek) -gt 2 ]; then
+    Logs_add $0 "$0 already running cannot perform check for date $DATE and $HISTORY days"
+    exit -1;
+fi
+
+if [ $(ps -ef | grep -v grep | grep ConvertBlueHTTP | grep -c $CLIENTBLUEPORTAIL) -eq 1 ]; then
+    Logs_add $0 "Conversion already running on $CLIENTBLUEPORTAIL cannot perform check for date $DATE and $HISTORY days"
     exit -1;
 fi
 

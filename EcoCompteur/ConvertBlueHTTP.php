@@ -89,7 +89,7 @@ foreach($entries as $ecoKey => $ecoObj)
                 if($isNewEntry or ($status["lastDate"] < $v["date"]))
                     {
                         $blueHTTP =  Eco_getBlueHTTP($ecoObj, $v);
-                        if(file_get_contents($blueHTTP))
+                        if(file_get_contents($blueHTTP) !== FALSE)
                             {
                                 $status["lastDate"] = $v["date"];
 
