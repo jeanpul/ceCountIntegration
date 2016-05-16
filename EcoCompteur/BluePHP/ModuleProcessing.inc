@@ -177,23 +177,23 @@ class ModuleProcessing
 
   private function getModuleEntry($params)
   {
-    $res = array();
-    if($this->haveKey($params))
-      {
-	$query = "SELECT * FROM " . $this->getName() . 
-	  " WHERE " . $this->getKeyCond($params);
-	$this->connect();
-	$result = $this->con->query($query);
-	$res = $result->nextAssoc();
-	$result->freeResult();
-      }
-    else
-      {
-	$res = array_merge($this->getModuleParams($params),
-			   $params);
-	$res = array_merge($res, $params);
-      }
-    return $res;
+      $res = array();
+      if($this->haveKey($params))
+          {
+              $query = "SELECT * FROM " . $this->getName() . 
+                  " WHERE " . $this->getKeyCond($params);             
+              $this->connect();
+              $result = $this->con->query($query);
+              $res = $result->nextAssoc();
+              $result->freeResult();
+          }
+      else
+          {
+              $res = array_merge($this->getModuleParams($params),
+              $params);
+              $res = array_merge($res, $params);
+          }
+      return $res;
   }
 
   private function getModuleParams($params)
